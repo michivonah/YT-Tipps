@@ -1,0 +1,138 @@
+body{
+   margin: 0;
+   padding: 0;
+   color: #000;
+   background: #fff3f3;
+   text-align: center;
+   font-family: "open sans", sans-serif;
+   }
+
+
+   #loading-screen{
+   width: 100%;
+   height: 100vh;
+   background: #ff9090;
+   position: fixed;
+   align-items: center;
+   justify-content: center;
+   display: flex;
+   }
+
+   #loading{
+   width: 50px;
+   height: 50px;
+   color: #ff0000;
+   border: 10px solid;
+   border-radius: 50%;
+   border-top-color: transparent;
+   animation: loading 1s infinite;
+   }
+
+   #navbar{
+   background: linear-gradient(120deg, #ff0000, #ff9090, #ff0000);
+   height: 56px;
+   width: 100%;
+   top: 0;
+   position: absolute;
+   }
+
+   #navbar p{
+   text-align: left;
+   margin: 15px;
+   font-family: "Bangers", cursive;
+   font-size: 25px;
+   color: #fff;
+   }
+
+   #content{
+   margin: auto;
+   max-width: 1300px;
+   }
+
+   #channels{
+   width: 90%;
+   margin: auto;
+   }
+
+   .channel-widget{
+   background: #ff9090;
+   border-radius: 8px;
+   padding: 10px;
+   text-align: left;
+   overflow: hidden;
+   }
+
+   .channel-img{
+   height: 72px;
+   width: 72px !important;
+   border-radius: 50%;
+   float: left;
+   margin: 15px;
+   }
+
+   .channel-widget button{
+   height: auto;
+   width: 80%;
+   font-size: 20px;
+   border: 2px solid;
+   color: #fff;
+   background: transparent;
+   border-radius: 12px;
+   float: right;
+   margin-right: 20px;
+   }
+
+   .channel-name{
+   margin-top: 15px;
+   }
+
+   .channel-widget p{
+   display: flex;
+   }
+
+   .placeholder{
+   height: 66px;
+   width: 100%;
+   }
+
+   .tip{
+   width: 90%;
+   height: auto;
+   background: #ff9090;
+   margin: auto;
+   border-radius: 8px;
+   }
+
+   ::-webkit-scrollbar{
+   width: 14px;
+   background: #transparent;
+   }
+
+   ::-webkit-scrollbar-thumb{
+   background: linear-gradient(120deg, #ff9090, #ff0000);
+   border-radius: 10px;
+   }
+
+   ::-moz-webkit-scrollbar{
+   width: 14px;
+   background: #transparent;
+   }
+
+   ::-moz-webkit-scrollbar-thumb{
+   background: linear-gradient(120deg, #ff9090, #ff0000);
+   border-radius: 10px;
+   }
+
+
+   @keyframes loading{
+   to{ transform: rotate(720deg); }
+   }
+
+   /*
+   Farben
+   YT-Rot: #ff0000
+   rot: #ff5858
+   hellrot: #ff9090
+   bgrot: #fff3f3
+
+   */
