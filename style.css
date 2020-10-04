@@ -33,24 +33,25 @@ body{
    height: 56px;
    width: 100%;
    top: 0;
-   position: absolute;
+   position: fixed;
    }
 
    #navbar p{
    text-align: left;
    margin: 15px;
-   font-family: "Bangers", sans-serifs;
+   font-family: "Bangers", sans-serif;
    font-size: 25px;
    color: #fff;
    }
 
    #content{
    margin: auto;
+   width: 90%;
    max-width: 1300px;
+   text-align: left;
    }
 
    #channels{
-   width: 90%;
    margin: auto;
    }
 
@@ -101,6 +102,11 @@ body{
    background: #ff9090;
    margin: auto;
    border-radius: 8px;
+   }
+
+   .tip h3, p{
+   margin-left: 10px;
+   margin-right: 10px;
    }
 
    ::-webkit-scrollbar{
