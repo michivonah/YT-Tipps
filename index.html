@@ -131,6 +131,7 @@
           <h3>Disclaimer</h3>
           <p>Werbung wegen Markennennung/Erwähnung verschiedener Marken, Diensten und Leuten.</p>
           <h5>Alle Angaben ohne Gew&auml;hrleistung.</h5>
+          <h5 id="toggle-darkmode">toggle Darkmode</h5>
         </div>
       </div>
 
@@ -140,6 +141,22 @@
       // Loading
       $(window).on("load", function(){
         $("#loading-screen").fadeOut(750);
+      });
+
+      // toggle Darkmode
+      $("#toggle-darkmode").click(function(){
+          function darkmode(){
+            $('body').css('background', '#181818');
+            $('body').css('color', '#fff');
+            $('body a').css('color', '#fff');
+            $('#navbar p').css('color', '#fff');
+            $('.tip').css('background', '#3E3E3E');
+            $('.channel-widget').css('background', '#3E3E3E');
+            $('.channel-widget button').css('color', '#fff');
+            $("#toggle-darkmode").fadeOut(500);
+            $('html, body').animate({scrollTop:0}, '1000');
+          }
+          darkmode();
       });
 
       // OwlCarousel2
