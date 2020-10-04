@@ -5,6 +5,8 @@ body{
    background: #fff3f3;
    text-align: center;
    font-family: "open sans", sans-serif;
+   scrollbar-color: #ff9090 #ff0000;
+   scrollbar-width: 14px;
    }
 
 
@@ -73,14 +75,14 @@ body{
 
    .channel-widget button{
    height: auto;
-   width: 80%;
+   width: 70%;
    font-size: 20px;
    border: 2px solid;
-   color: #fff;
+   color: #000;
    background: transparent;
-   border-radius: 12px;
+   border-radius: 8px;
    float: right;
-   margin-right: 20px;
+   margin-right: 5px;
    }
 
    .channel-name{
