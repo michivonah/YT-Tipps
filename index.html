@@ -2,11 +2,11 @@
 <html lang="de">
 <head>
          <title>YT Tipps</title>
-         <meta name="apple-mobile-web-app-title" content="titel">
-         <link rel="icon" type="image/png" href="icons/favicon.png">
-         <link rel="shortcut icon" type="image/svg+xml" href="icons/favicon.svg">
-         <link rel="apple-touch-icon" href="icons/favicon.svg" sizes="any">
-         <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" sizes="any">
+         <meta name="mobile-web-app-title" content="YT Tipps">
+         <meta name="apple-mobile-web-app-title" content="YT Tipps">
+         <link rel="icon" type="image/png" href="favicon.png">
+         <link rel="shortcut icon" type="image/png" href="favicon.png">
+         <link rel="apple-touch-icon" href="favicon.png" sizes="any">
          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
@@ -123,13 +123,18 @@
               <li><a href="https://pixabay.com/de/music/">Pixabay Musik</a></li>
             </ul>
           </div>
+          <div class="tip">
+            <h3>Kanal erstellen zb. Zweitkanal</h3>
+            <p>Wenn du einen YouTube Kanal erstellen willst, klicke unten auf den Button und du wirst direkt zu YouTube weitergeleitet. Es ist zum Beispiel n&uuml;tzlich wenn du einen Zweitkanal mit Streaminghighlights erstellen willst.</p>
+            <a href="https://www.youtube.com/channel_switcher"><button>Kanal erstellen</button></a>
+          </div>
         </div>
 
         <div id="sources">
           <h3>Quellen</h3>
           <p>Die Bilder bei den Empfehlungen sind die jewiligen Kanalprofilbilder der Kan&auml;le. Das Karussel konnte ich mithilfe <a href="https://www.youtube.com/watch?v=-WdseiAXImI">dieses</a> Tutorials, für OwlCarousel2, umsetzen.</p>
           <h3>Disclaimer</h3>
-          <p>Werbung wegen Markennennung/Erwähnung verschiedener Marken, Diensten und Leuten.</p>
+          <p>Werbung wegen Markennennung/Erwähnung verschiedener Marken, Diensten und Leuten. Wenn du den Darkmode aktivierst, wird diese Entscheidung lokal auf deinem Ger&auml;t mit der WebStorageAPI abgespeichert.</p>
           <h5>Alle Angaben ohne Gew&auml;hrleistung.</h5>
           <h5 id="toggle-darkmode">toggle Darkmode</h5>
         </div>
@@ -141,22 +146,34 @@
       // Loading
       $(window).on("load", function(){
         $("#loading-screen").fadeOut(750);
+        if(localStorage.getItem('darkmode') == "true"){
+          darkmode();
+        }
       });
+
+      // darkmode
+      function darkmode(){
+        $('body').css('background', '#181818');
+        $('body').css('color', '#fff');
+        $('body a').css('color', '#fff');
+        $('#navbar p').css('color', '#fff');
+        $('.tip').css('background', '#3E3E3E');
+        $('.channel-widget').css('background', '#3E3E3E');
+        $('button').css('color', '#fff');
+        $("#toggle-darkmode").fadeOut(500);
+        localStorage.setItem('darkmode', 'true');
+      }
 
       // toggle Darkmode
       $("#toggle-darkmode").click(function(){
-          function darkmode(){
-            $('body').css('background', '#181818');
-            $('body').css('color', '#fff');
-            $('body a').css('color', '#fff');
-            $('#navbar p').css('color', '#fff');
-            $('.tip').css('background', '#3E3E3E');
-            $('.channel-widget').css('background', '#3E3E3E');
-            $('.channel-widget button').css('color', '#fff');
-            $("#toggle-darkmode").fadeOut(500);
-            $('html, body').animate({scrollTop:0}, '1000');
+          if(localStorage.getItem('darkmode') == "true"){
+            localStorage.setItem('darkmode', 'false');
+            location.reload();
           }
-          darkmode();
+          else{
+            darkmode();
+          }
+          $('html, body').animate({scrollTop:0}, '1000');
       });
 
       // OwlCarousel2
