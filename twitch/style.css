@@ -1,0 +1,168 @@
+body{
+   margin: 0;
+   padding: 0;
+   color: #000;
+   background: #fff3f3;
+   text-align: center;
+   font-family: "open sans", sans-serif;
+   scrollbar-color: #ff9090 #ff0000;
+   scrollbar-width: 14px;
+   }
+
+   #loading-screen{
+   width: 100%;
+   height: 100vh;
+   background: radial-gradient(circle, rgba(243,235,255,1) 0%, rgba(145,71,255,1) 100%);
+   position: fixed;
+   align-items: center;
+   justify-content: center;
+   display: flex;
+   z-index: 1000;
+   }
+
+   #loading{
+   width: 50px;
+   height: 50px;
+   color: #9147ff;
+   border: 10px solid;
+   border-radius: 50%;
+   border-top-color: transparent;
+   animation: loading 1s infinite;
+   }
+
+   #navbar{
+   background: linear-gradient(120deg, #9147ff, #c39bff, #9147ff);
+   height: 56px;
+   width: 100%;
+   top: 0;
+   position: fixed;
+   z-index: 999;
+   }
+
+   #navbar p{
+   text-align: left;
+   margin: 15px;
+   font-family: "Bangers", sans-serif;
+   font-size: 25px;
+   color: #fff;
+   }
+
+   #content{
+   margin: auto;
+   width: 90%;
+   max-width: 1300px;
+   text-align: left;
+   }
+
+   #channels{
+   margin: auto;
+   }
+
+   .channel-widget{
+   background: #ff9090;
+   border-radius: 8px;
+   padding: 10px;
+   text-align: left;
+   overflow: hidden;
+   }
+
+   .channel-img{
+   height: 72px;
+   width: 72px !important;
+   border-radius: 50%;
+   float: left;
+   margin: 15px;
+   }
+
+   .channel-widget button{
+   height: auto;
+   width: 70%;
+   font-size: 20px;
+   border: 2px solid;
+   color: #000;
+   background: transparent;
+   border-radius: 8px;
+   float: right;
+   margin-right: 5px;
+   }
+
+   .channel-name{
+   margin-top: 15px;
+   }
+
+   .channel-widget p{
+   display: flex;
+   }
+
+   .placeholder{
+   height: 66px;
+   width: 100%;
+   }
+
+   .tip{
+   width: 90%;
+   height: auto;
+   background: #ff9090;
+   margin: auto;
+   border-radius: 8px;
+   }
+
+   .tip h3, p{
+   margin-left: 10px;
+   margin-right: 10px;
+   }
+
+   .tip button{
+   height: auto;
+   width: 90%;
+   font-size: 20px;
+   border: 2px solid;
+   color: #000;
+   background: transparent;
+   border-radius: 8px;
+   margin: 10px;
+   margin-left: 5%;
+   }
+
+   ::-webkit-scrollbar{
+   width: 14px;
+   background: #transparent;
+   }
+
+   ::-webkit-scrollbar-thumb{
+   background: linear-gradient(120deg, #9147ff, #c39bff);
+   border-radius: 10px;
+   }
+
+   ::-moz-webkit-scrollbar{
+   width: 14px;
+   background: transparent;
+   border: none;
+   }
+
+   ::-moz-webkit-scrollbar-thumb{
+   background: linear-gradient(120deg, #9147ff, #c39bff);
+   border-radius: 10px;
+   }
+
+   a{
+   color: #000;
+   text-decoration: none;
+   }
+
+   a:hover{
+   color: #000;
+   text-decoration: underline;
+   }
+
+
+   @keyframes loading{
+   to{ transform: rotate(720deg); }
+   }
+
+   /*
+   Farben
+   twitch-violett: #9147ff
+   hell violett: #c39bff
+
+   */
